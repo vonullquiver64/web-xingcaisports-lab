@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>杏彩体育 · 轻量导航</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fafaf9;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      color: #1d1d1f;
+      line-height: 1.7;
+      padding: 0 24px;
+    }
+
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 0 80px;
+    }
+
+    /* 顶部导航 */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      border-bottom: 1px solid #e5e5e5;
+      margin-bottom: 56px;
+    }
+
+    .nav-logo {
+      font-weight: 600;
+      font-size: 1.3rem;
+      letter-spacing: 0.5px;
+      color: #1d1d1f;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.95rem;
+      color: #515154;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #0a58ca;
+    }
+
+    /* 主内容 */
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+      color: #1a1a1c;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      border-left: 4px solid #0a58ca;
+      padding-left: 16px;
+      color: #1d1d1f;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 500;
+      margin-top: 28px;
+      margin-bottom: 8px;
+      color: #2c2c2e;
+    }
+
+    p {
+      margin-bottom: 20px;
+      color: #3a3a3c;
+    }
+
+    .intro-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+
+    a {
+      color: #0a58ca;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(10, 88, 202, 0.2);
+      transition: border-color 0.2s;
+    }
+
+    a:hover {
+      border-bottom-color: #0a58ca;
+    }
+
+    /* 场景网格 */
+    .scenes {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 32px;
+      margin: 40px 0 24px;
+    }
+
+    .scene-card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 24px 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+      border: 1px solid #eee;
+      transition: box-shadow 0.2s, transform 0.15s;
+    }
+
+    .scene-card:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+      transform: translateY(-2px);
+    }
+
+    .scene-card h3 {
+      margin-top: 0;
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 10px;
+      color: #1d1d1f;
+    }
+
+    .scene-card p {
+      font-size: 0.95rem;
+      margin-bottom: 0;
+      color: #515154;
+    }
+
+    /* 说明列表 */
+    .faq-list {
+      margin-top: 20px;
+      margin-bottom: 48px;
+    }
+
+    .faq-item {
+      padding: 16px 0;
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      font-size: 1rem;
+      margin-bottom: 6px;
+      color: #1d1d1f;
+    }
+
+    .faq-a {
+      font-size: 0.95rem;
+      color: #5e5e60;
+      line-height: 1.6;
+    }
+
+    .cta-text {
+      font-size: 1.05rem;
+      background: #f2f2f2;
+      padding: 24px 28px;
+      border-radius: 16px;
+      margin-top: 40px;
+      color: #1d1d1f;
+      border: 1px solid #e6e6e6;
+    }
+
+    /* 响应式 */
+    @media (max-width: 680px) {
+      .page {
+        padding: 32px 0 60px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .scenes {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .nav-links {
+        gap: 16px;
+      }
+
+      .nav-links a {
+        font-size: 0.9rem;
+      }
+
+      .cta-text {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 0 16px;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="nav">
+      <span class="nav-logo">杏彩体育</span>
+      <ul class="nav-links">
+        <li><a href="#intro">关于</a></li>
+        <li><a href="#scenes">场景</a></li>
+        <li><a href="#faq">说明</a></li>
+      </ul>
+    </nav>
+
+    <h1>有节奏地感受运动乐趣</h1>
+
+    <p class="intro-text" id="intro">
+      无论你是刚接触运动资讯的新人，还是已经习惯每天翻看赛程的老朋友，都应该有一个清爽、不嘈杂的起点。在<strong>杏彩体育</strong>，我们更希望把注意力放回那些让人心动的瞬间——一次绝杀、一场逆转、一个不可思议的记录。这里没有过度的渲染，只有真实的赛事轮廓和与你合拍的节奏。
+    </p>
+
+    <p>
+      很多人问：为什么选择 <a href="https://web-xingcaisports.com">杏彩体育</a>？答案其实很简单——因为这里足够直接。你可以快速找到你关心的内容，不会被无关的信息打断。我们相信，好的体验是让人感觉不到界面的存在，只留下内容本身。
+    </p>
+
+    <h2 id="scenes">三个日常场景</h2>
+
+    <div class="scenes">
+      <div class="scene-card">
+        <h3>通勤路上</h3>
+        <p>早高峰刷赛程、看比分，页面轻快不耗流量。一条通知就能掌握主队动态，不用打开多个应用。</p>
+      </div>
+      <div class="scene-card">
+        <h3>午后休息</h3>
+        <p>翻几篇赛事回顾或数据看点，内容结构干净，没有弹窗干扰。遇到的都算有效信息。</p>
+      </div>
+      <div class="scene-card">
+        <h3>晚间放松</h3>
+        <p>打开喜欢的赛事列表，随手标记关注。节奏由你掌控，一切服务于你的观看习惯。</p>
+      </div>
+    </div>
+
+    <p style="margin-top: 12px;">
+      这三个场景覆盖了很多人的日常——<strong>杏彩体育</strong>并非要做最大的平台，而是希望成为你最顺手的那一个。
+    </p>
+
+    <h2 id="faq">常见说明</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">平台覆盖哪些赛事？</div>
+        <div class="faq-a">包括主流联赛和部分小众赛事，持续更新。具体内容以站内实际展示为准。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">是否需要注册才能使用？</div>
+        <div class="faq-a">浏览基础资讯不需要注册。部分个性化功能（如收藏、订阅）建议登录使用，但不强制。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">内容更新频率如何？</div>
+        <div class="faq-a">赛程、比分实时更新，资讯类内容每日均有新增。你可以按需查看，不必担心信息过载。</div>
+      </div>
+    </div>
+
+    <p>
+      如果你之前没听说过 <a href="https://web-xingcaisports.com">杏彩体育</a>，不妨从今天开始随便逛逛。不需要抱着一定要发现什么的心态，就像散步一样，看看此刻有哪些比赛正在发生，或者哪些有趣的数据悄悄出现。我们一直在这里，不着急，也不喧哗。
+    </p>
+
+    <div class="cta-text">
+      <strong>关于起点</strong> —— 当你想从某个地方开始了解运动世界，<a href="https://web-xingcaisports.com">杏彩体育</a>是一个不错的选择。它不会替你决定看什么，但会把你真正需要的内容放在手边。
+    </div>
+
+    <footer style="margin-top: 64px; border-top: 1px solid #e5e5e5; padding-top: 24px; font-size: 0.85rem; color: #8e8e93; text-align: center;">
+      <span>杏彩体育 · 保持简单</span>
+    </footer>
+  </div>
+</body>
+</html>
